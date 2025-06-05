@@ -14,3 +14,23 @@ This project sets up a Raspberry Pi cluster using Ansible. It automates the inst
 - Run node_exporter on every node and collect metrics centrally
 - Visualize metrics using custom dashboards in Grafana
 - Keep all setup scripts version-controlled in this GitHub repository
+
+
+## Directory Structure
+
+```text
+rasp-project/
+├── inventory/              # Ansible inventory with grouped hosts
+│   └── hosts.yml
+├── playbooks/              # Playbooks for configuring the cluster
+│   ├── cluster.yml
+│   ├── prometheus_grafana.yml
+│   └── exporters.yml
+├── roles/                  # Ansible roles per service
+│   ├── consul/
+│   ├── prometheus/
+│   ├── grafana/
+│   └── node_exporter/
+├── group_vars/             # Group-wide Ansible variables
+│   └── all.yml
+└── README.md
