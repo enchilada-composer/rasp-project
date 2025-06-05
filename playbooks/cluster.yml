@@ -1,0 +1,5 @@
+- name: set up consul cluster
+  hosts: consul_cluster
+  roles:
+    - consul
+
